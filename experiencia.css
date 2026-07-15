@@ -1,0 +1,252 @@
+/* ==========================================
+   Cabeçalho da página Experiência
+========================================== */
+
+.Titulo{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    margin-bottom:60px;
+}
+
+/* Ícone do título */
+
+.Titulo img{
+    width:70px;
+}
+
+/* Título principal */
+
+.Titulo h1{
+    font-size:48px;
+    color:#00e5ff;
+}
+
+/* Subtítulo */
+
+.Titulo p{
+    color:#bdbdbd;
+    font-size:20px;
+}
+
+/* ==========================================
+   Container das experiências profissionais
+========================================== */
+
+.Experiencias{
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
+
+/* ==========================================
+   Card de experiência profissional
+========================================== */
+
+.ExperienciaCard{
+    background:#111;
+
+    border:1px solid rgba(0,229,255,.25);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    transition:.3s;
+
+    box-shadow:0 0 10px rgba(0,229,255,.15);
+}
+
+/* Efeito ao passar o mouse sobre o card */
+
+.ExperienciaCard:hover{
+    transform:translateY(-8px);
+
+    box-shadow:0 0 20px rgba(0,229,255,.35);
+
+    border-color:#00e5ff;
+}
+
+/* ==========================================
+   Período da experiência
+========================================== */
+
+.Data{
+    background:#00e5ff;
+
+    color:black;
+
+    padding:8px 18px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+}
+
+/* Cargo exercido */
+
+.ExperienciaCard h2{
+    margin-top:20px;
+
+    color:white;
+
+    font-size:32px;
+}
+
+/* Empresa */
+
+.ExperienciaCard h3{
+    color:#00e5ff;
+
+    margin-bottom:20px;
+}
+
+/* ==========================================
+   Lista de atividades desenvolvidas
+========================================== */
+
+.ExperienciaCard ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+/* Cada item da lista */
+
+.ExperienciaCard li{
+
+    margin:15px 0;
+
+    padding-left:20px;
+
+    position:relative;
+
+    color:#d9d9d9;
+}
+
+/* Ícone de confirmação antes de cada item */
+
+.ExperienciaCard li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    color:#00e5ff;
+}
+
+/* ==========================================
+   Seção de tecnologias utilizadas
+========================================== */
+
+.Tecnologias{
+
+    margin-top:70px;
+
+}
+
+/* Título da seção */
+
+.Tecnologias h2{
+
+    color:#00e5ff;
+
+    margin-bottom:25px;
+
+}
+
+/* Container das tecnologias */
+
+.Skills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+/* Botão individual de tecnologia */
+
+.Skills span{
+
+    border:1px solid #00e5ff;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+/* Efeito ao passar o mouse */
+
+.Skills span:hover{
+
+    background:#00e5ff;
+
+    color:black;
+
+}
+
+/* ==========================================
+   Seção de estatísticas profissionais
+========================================== */
+
+.Estatisticas{
+
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+/* Card de estatística */
+
+.Estatisticas div{
+
+    flex:1;
+
+    min-width:220px;
+
+    background:#111;
+
+    border:1px solid rgba(0,229,255,.25);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+}
+
+/* Número em destaque */
+
+.Estatisticas h2{
+
+    font-size:50px;
+
+    color:#00e5ff;
+
+}
+
+/* Texto descritivo */
+
+.Estatisticas p{
+
+    color:#d9d9d9;
+
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título exibido na aba do navegador -->
+    <title>Document</title>
+
+    <!-- Arquivo CSS global -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Arquivo CSS específico da página inicial -->
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+
+    <!-- Menu lateral de navegação -->
+    <aside class="Menu">
+
+        <a href="#"><img src="/imagens/Icone Inicio.png" alt="Inicio"></a>
+        <a href="perfil.html"><img src="/imagens/Icone Perfil.png" alt="Sobre"></a>
+        <a href="experiencia.html"><img src="/imagens/Icone maleta.png" alt="Experiencias"></a>
+        <a href="contato.html"><img src="/imagens/Icone Email.png" alt="Contato"></a>
+
+    </aside>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+
+        <!-- Foto de perfil -->
+        <img src="/imagens/Foto Perfil.png" alt="Imagem de perfil" class="Perfil">
+
+        <!-- Seção de boas-vindas -->
+        <section class="BoasVindas">
+
+            <!-- Título preenchido dinamicamente pelo JavaScript -->
+            <h1 id="titulo"></h1>
+
+            <p>Seja bem vindo ao meu portifolio profissional</p>
+
+        </section>
+
+        <!-- Pequena apresentação pessoal -->
+        <section class="texto">
+
+            <p>Sou um estudante de programação apaixonado por tecnologia</p>
+            <p>e tudo o que ela é capaz</p>
+
+        </section>
+
+        <!-- Cards destacando habilidades -->
+        <section class="Cards">
+
+            <!-- Card Desenvolvimento -->
+            <div class="Card">
+
+                <img src="/imagens/Icone Programação.png" alt="Ícone Desenvolvimento">
+
+                <div class="textocard">
+
+                    <h1>Desenvolvimento</h1>
+
+                    <p>Criação e desenvolvimento de soluções web modernas e eficientes.</p>
+
+                </div>
+
+            </div>
+
+            <!-- Card Proatividade -->
+            <div class="Card">
+
+                <img src="/imagens/Icone Proativo.png" alt="Ícone Proatividade">
+
+                <div class="textocard">
+
+                    <h1>Proativo</h1>
+
+                    <p>Proativo com minhas tarefas e responsabilidades.</p>
+
+                </div>
+
+            </div>
+
+            <!-- Card Inovação -->
+            <div class="Card">
+
+                <img src="/imagens/Icone Inovacao.png" alt="Ícone Inovação">
+
+                <div class="textocard">
+
+                    <h1>Inovação</h1>
+
+                    <p>Sempre aprendendo e inovando para adaptar ao mercado.</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Botões de ação -->
+        <section class="botao">
+
+            <a href="perfil.html" class="Visualizar">
+                 Confira mais sobre mim
+            </a>
+
+            <a href="curriculo.pdf" download class="CV">
+                 Download CV
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- Arquivo JavaScript responsável pelas animações e interatividade -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

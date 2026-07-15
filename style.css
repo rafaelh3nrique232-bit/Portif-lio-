@@ -1,0 +1,137 @@
+/* ===========================
+   Reset de estilos
+   Remove margens e espaçamentos
+   padrões do navegador
+=========================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===========================
+   Configuração geral da página
+=========================== */
+
+body{
+    margin:0;
+    background:#000;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ===========================
+   Menu lateral fixo
+=========================== */
+
+.Menu{
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 55px;
+    padding: 20px 0;
+
+    background: #161616;
+
+    border: 2px solid #00d9ff;
+    border-radius: 999px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    box-shadow:
+     0 0 10px #00e5ff,
+     0 0 20px rgba(0, 217, 255, .4);
+}
+
+/* ===========================
+   Área clicável dos botões
+   do menu lateral
+=========================== */
+
+.Menu a{
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+/* ===========================
+   Efeito ao passar o mouse
+   sobre os botões do menu
+=========================== */
+
+.Menu a:hover{
+    background: linear-gradient(90deg, #00d9ff, #004cff);
+
+    transform: scale(1.15);
+
+    box-shadow: 0 0 15px #00d9ff;
+}
+
+/* ===========================
+   Tamanho dos ícones do menu
+=========================== */
+
+.Menu img{
+    width: 30px;
+    border-radius: 999px;
+}
+
+/* ===========================
+   Área principal do site
+=========================== */
+
+main{
+    margin-left:110px;
+
+    min-height:100vh;
+
+    width:calc(100% - 110px);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:50px 40px;
+}
+
+/* ===========================
+   Estado inicial dos cards
+   (invisíveis antes da animação)
+=========================== */
+
+.Card,
+.CardPerfil,
+.CardFormacao{
+
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .8s ease;
+
+}
+
+/* ===========================
+   Estado final da animação
+   quando os cards aparecem
+=========================== */
+
+.Card.aparecer,
+.CardPerfil.aparecer,
+.CardFormacao.aparecer{
+
+    opacity: 1;
+    transform: translateY(0);
+
+}

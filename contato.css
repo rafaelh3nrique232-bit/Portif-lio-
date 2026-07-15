@@ -1,0 +1,171 @@
+/* ==========================================
+   Título da página de Contato
+========================================== */
+
+.TituloContato{
+
+    /* Centraliza o conteúdo do título */
+    text-align:center;
+
+    /* Espaçamento inferior */
+    margin-bottom:60px;
+
+}
+
+/* Título principal */
+
+.TituloContato h1{
+
+    font-size:50px;
+
+}
+
+/* Palavra em destaque */
+
+.TituloContato span{
+
+    color:#00e5ff;
+
+}
+
+/* Subtítulo */
+
+.TituloContato p{
+
+    margin-top:10px;
+
+    color:#bdbdbd;
+
+}
+
+/* ==========================================
+   Container principal da página
+========================================== */
+
+.ContainerContato{
+
+    display:flex;
+
+    gap:50px;
+
+    /* Permite adaptação para telas menores */
+    flex-wrap:wrap;
+
+}
+
+/* ==========================================
+   Área das informações de contato
+========================================== */
+
+.Informacoes{
+
+    flex:1;
+
+    min-width:250px;
+
+}
+
+/* Título da seção */
+
+.Informacoes h2{
+
+    color:#00e5ff;
+
+    margin-bottom:30px;
+
+}
+
+/* Cada informação de contato */
+
+.Info{
+
+    margin-bottom:25px;
+
+    font-size:20px;
+
+}
+
+/* ==========================================
+   Formulário de contato
+========================================== */
+
+form{
+
+    flex:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/* Campos de entrada e área de mensagem */
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:18px;
+
+    background:#111;
+
+    border:1px solid rgba(0,229,255,.3);
+
+    border-radius:15px;
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+/* Efeito ao selecionar um campo */
+
+input:focus,
+textarea:focus{
+
+    border-color:#00e5ff;
+
+    box-shadow:0 0 15px rgba(0,229,255,.3);
+
+}
+
+/* ==========================================
+   Botão de envio
+========================================== */
+
+button{
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    /* Fundo em degradê */
+    background:linear-gradient(90deg,#00e5ff,#004cff);
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+/* Efeito ao passar o mouse */
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 20px rgba(0,229,255,.5);
+
+}

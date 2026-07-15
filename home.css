@@ -1,0 +1,277 @@
+/* ==========================================
+   Foto de perfil
+========================================== */
+
+.Perfil{
+    width: 400px;
+    height: auto;
+    margin-top: 30px;
+
+    /* Deixa a imagem completamente circular */
+    border-radius: 999px;
+
+    align-items: center;
+
+    /* Adiciona efeito neon ao redor da foto */
+    box-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(255, 255, 255),
+        0 0 20px rgb(255, 255, 255),
+        0 0 40px rgb(255, 255, 255);
+}
+
+/* ==========================================
+   Seção de boas-vindas
+========================================== */
+
+/* Título principal */
+
+.BoasVindas h1{
+    color: aliceblue;
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+}
+
+/* Nome em destaque com efeito degradê */
+
+.BoasVindas h1 span{
+    background: linear-gradient(to right, #00e5ff, #0011ff);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+/* Texto de apresentação */
+
+.BoasVindas p{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==========================================
+   Texto complementar
+========================================== */
+
+.texto p{
+    color: white;
+    font-size: 15px;
+}
+
+/* ==========================================
+   Botão "Confira mais sobre mim"
+========================================== */
+
+.Visualizar{
+
+    padding: 12px 16px;
+
+    cursor: pointer;
+
+    border-radius: 999px;
+
+    background: linear-gradient(to right, #00e5ff, #0011ff);
+
+    border-color: auto;
+
+    color: white;
+
+}
+
+/* ==========================================
+   Botão "Download CV"
+========================================== */
+
+.CV{
+
+    padding: 12px 16px;
+
+    cursor: pointer;
+
+    border-radius: 999px;
+
+    background-color: black;
+
+    border-color: #00e5ff;
+
+    color: white;
+
+    /* Efeito luminoso no botão */
+    box-shadow: 0 0 5px #6ef0ff;
+
+}
+
+/* ==========================================
+   Área que contém os cards
+========================================== */
+
+.Cards{
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 70px;
+
+    /* Permite quebrar linha em telas menores */
+    flex-wrap: wrap;
+
+    margin-bottom: 20px;
+
+}
+
+/* ==========================================
+   Card de habilidades
+========================================== */
+
+.Card{
+
+    width: 350px;
+
+    min-height: 140px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    background: #000000;
+
+    border: 1px solid rgba(0, 229, 255, .25);
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    transition: 0.3s;
+
+}
+
+/* Efeito ao passar o mouse sobre o card */
+
+.Card:hover{
+
+    transform: translateY(-8px);
+
+    border-color: #00e5ff;
+
+    box-shadow: 0 0 15px rgba(0, 229, 255, .4);
+
+}
+
+/* ==========================================
+   Conteúdo interno dos cards
+========================================== */
+
+/* Título do card */
+
+.Card h1{
+
+    color: #00e5ff;
+
+    font-size: 22px;
+
+    margin-bottom: 22px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Texto descritivo */
+
+.Card p{
+
+    color: #bdbdbd;
+
+    line-height: 1.6;
+
+    font-size: 15px;
+
+}
+
+/* Organização vertical do texto */
+
+.textocard{
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+/* Título interno */
+
+.textocard h1{
+
+    color: #00e5ff;
+
+    margin: 0 0 12px 0;
+
+    font-size: 28px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Parágrafo interno */
+
+.textocard p{
+
+    color: #cfcfcf;
+
+    margin: 0;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+
+}
+
+/* ==========================================
+   Área dos botões da página inicial
+========================================== */
+
+.botao{
+
+    display: flex;
+
+    padding: 8px 12px;
+
+    margin-bottom: 50px;
+
+}
+.CV{
+    display:inline-block;
+    padding:12px 16px;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    border-radius:999px;
+
+    background:black;
+
+    border:2px solid #00e5ff;
+
+    color:white;
+
+    box-shadow:0 0 5px #6ef0ff;
+
+    transition:.3s;
+}
+
+.CV:hover{
+    background:#00e5ff;
+    color:black;
+}

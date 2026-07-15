@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título exibido na aba do navegador -->
+    <title>Contato</title>
+
+    <!-- Arquivo CSS global -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Arquivo CSS específico da página Contato -->
+    <link rel="stylesheet" href="contato.css">
+
+</head>
+
+<body>
+
+    <!-- Menu lateral de navegação -->
+    <aside class="Menu">
+
+        <a href="index.html"><img src="imagens/Icone Inicio.png" alt="Início"></a>
+        <a href="perfil.html"><img src="imagens/Icone Perfil.png" alt="Perfil"></a>
+        <a href="experiencia.html"><img src="imagens/Icone maleta.png" alt="Experiência"></a>
+        <a href="contato.html"><img src="imagens/Icone Email.png" alt="Contato"></a>
+
+    </aside>
+
+    <!-- Conteúdo principal da página -->
+    <main class="PaginaContato">
+
+        <!-- Título da página -->
+        <section class="TituloContato">
+
+            <h1>Entre em <span>Contato</span></h1>
+
+            <p>Tem alguma oportunidade ou projeto? Vamos conversar.</p>
+
+        </section>
+
+        <!-- Container contendo informações e formulário -->
+        <section class="ContainerContato">
+
+            <!-- Informações para contato -->
+            <div class="Informacoes">
+
+                <h2>Informações</h2>
+
+                <div class="Info">
+                    📧
+                    <span>rafael.h3nrique232@gmail.com</span>
+                </div>
+
+                <div class="Info">
+                    📱
+                    <span>(31) 99069-3186</span>
+                </div>
+
+                <div class="Info">
+                    📍
+                    <span>Minas Gerais - Brasil</span>
+                </div>
+
+            </div>
+
+            <!-- Formulário de envio de mensagens -->
+            <form id="formContato">
+
+                <!-- Campo Nome -->
+                <input
+                    type="text"
+                    name="from_name"
+                    placeholder="Seu nome"
+                    required>
+
+                <!-- Campo E-mail -->
+                <input
+                    type="email"
+                    name="from_email"
+                    placeholder="Seu e-mail"
+                    required>
+
+                <!-- Campo Assunto -->
+                <input
+                    type="text"
+                    name="subject"
+                    placeholder="Assunto"
+                    required>
+
+                <!-- Campo Mensagem -->
+                <textarea
+                    name="message"
+                    rows="8"
+                    placeholder="Digite sua mensagem..."
+                    required></textarea>
+
+                <!-- Botão para envio -->
+                <button type="submit">
+                    Enviar Mensagem
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Biblioteca do EmailJS utilizada para envio de e-mails -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+
+        // Inicializa o EmailJS com a chave pública da conta
+        emailjs.init({
+            publicKey: "O9qlAzNnzleB1toxF"
+        });
+
+        // Obtém o formulário pelo ID
+        const formulario = document.getElementById("formContato");
+
+        // Evento executado quando o formulário é enviado
+        formulario.addEventListener("submit", function (e) {
+
+            // Impede o recarregamento da página
+            e.preventDefault();
+
+            // Envia os dados para o serviço EmailJS
+            emailjs.sendForm(
+                "service_xfqmu7n",
+                "template_xlo98hn",
+                this
+            )
+
+            // Executado caso o envio seja realizado com sucesso
+            .then(function () {
+
+                alert("✅ Mensagem enviada com sucesso!");
+
+                // Limpa os campos do formulário
+                formulario.reset();
+
+            })
+
+            // Executado caso ocorra algum erro
+            .catch(function (erro) {
+
+                console.error(erro);
+
+                alert("❌ Ocorreu um erro ao enviar a mensagem.");
+
+            });
+
+        });
+
+    </script>
+
+    <!-- Arquivo JavaScript do projeto -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
