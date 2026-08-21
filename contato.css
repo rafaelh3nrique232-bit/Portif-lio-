@@ -1,171 +1,493 @@
 /* ==========================================
-   Título da página de Contato
+   TÍTULO DA PÁGINA DE CONTATO
 ========================================== */
 
-.TituloContato{
+.TituloContato {
+    width: 100%;
 
-    /* Centraliza o conteúdo do título */
-    text-align:center;
+    text-align: center;
 
-    /* Espaçamento inferior */
-    margin-bottom:60px;
+    margin-bottom: 60px;
 
+    box-sizing: border-box;
 }
+
 
 /* Título principal */
 
-.TituloContato h1{
+.TituloContato h1 {
+    font-size: 50px;
 
-    font-size:50px;
+    margin: 0;
 
+    color: white;
+
+    line-height: 1.2;
 }
+
 
 /* Palavra em destaque */
 
-.TituloContato span{
-
-    color:#00e5ff;
-
+.TituloContato span {
+    color: #00e5ff;
 }
+
 
 /* Subtítulo */
 
-.TituloContato p{
+.TituloContato p {
+    margin-top: 10px;
 
-    margin-top:10px;
+    margin-bottom: 0;
 
-    color:#bdbdbd;
+    color: #bdbdbd;
 
+    font-size: 18px;
+
+    line-height: 1.5;
 }
+
 
 /* ==========================================
-   Container principal da página
+   CONTAINER PRINCIPAL
 ========================================== */
 
-.ContainerContato{
+.ContainerContato {
+    width: 100%;
 
-    display:flex;
+    display: flex;
 
-    gap:50px;
+    gap: 50px;
 
-    /* Permite adaptação para telas menores */
-    flex-wrap:wrap;
+    align-items: flex-start;
 
+    flex-wrap: wrap;
+
+    box-sizing: border-box;
 }
+
 
 /* ==========================================
-   Área das informações de contato
+   INFORMAÇÕES DE CONTATO
 ========================================== */
 
-.Informacoes{
+.Informacoes {
+    flex: 1;
 
-    flex:1;
+    min-width: 250px;
 
-    min-width:250px;
-
+    box-sizing: border-box;
 }
+
 
 /* Título da seção */
 
-.Informacoes h2{
+.Informacoes h2 {
+    color: #00e5ff;
 
-    color:#00e5ff;
+    margin-top: 0;
 
-    margin-bottom:30px;
+    margin-bottom: 30px;
 
+    font-size: 28px;
 }
 
-/* Cada informação de contato */
-
-.Info{
-
-    margin-bottom:25px;
-
-    font-size:20px;
-
-}
 
 /* ==========================================
-   Formulário de contato
+   INFORMAÇÃO INDIVIDUAL
 ========================================== */
 
-form{
+.Info {
+    margin-bottom: 25px;
 
-    flex:2;
+    font-size: 20px;
 
-    display:flex;
+    color: white;
 
-    flex-direction:column;
-
-    gap:20px;
-
+    line-height: 1.5;
 }
 
-/* Campos de entrada e área de mensagem */
-
-input,
-textarea{
-
-    width:100%;
-
-    padding:18px;
-
-    background:#111;
-
-    border:1px solid rgba(0,229,255,.3);
-
-    border-radius:15px;
-
-    color:white;
-
-    font-size:16px;
-
-    outline:none;
-
-}
-
-/* Efeito ao selecionar um campo */
-
-input:focus,
-textarea:focus{
-
-    border-color:#00e5ff;
-
-    box-shadow:0 0 15px rgba(0,229,255,.3);
-
-}
 
 /* ==========================================
-   Botão de envio
+   FORMULÁRIO
 ========================================== */
 
-button{
+.ContainerContato form {
+    flex: 2;
 
-    padding:18px;
+    min-width: 300px;
 
-    border:none;
+    display: flex;
 
-    border-radius:15px;
+    flex-direction: column;
 
-    /* Fundo em degradê */
-    background:linear-gradient(90deg,#00e5ff,#004cff);
+    gap: 20px;
 
-    color:white;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
+    box-sizing: border-box;
 }
 
-/* Efeito ao passar o mouse */
 
-button:hover{
+/* ==========================================
+   CAMPOS
+========================================== */
 
-    transform:translateY(-4px);
+.ContainerContato input,
+.ContainerContato textarea {
+    width: 100%;
 
-    box-shadow:0 0 20px rgba(0,229,255,.5);
+    box-sizing: border-box;
 
+    padding: 18px;
+
+    background: #111;
+
+    border: 1px solid rgba(0, 229, 255, .3);
+
+    border-radius: 15px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    outline: none;
+
+    transition: .3s;
+}
+
+
+/* Placeholder */
+
+.ContainerContato input::placeholder,
+.ContainerContato textarea::placeholder {
+    color: #888;
+}
+
+
+/* Área de mensagem */
+
+.ContainerContato textarea {
+    min-height: 180px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+
+/* Foco */
+
+.ContainerContato input:focus,
+.ContainerContato textarea:focus {
+    border-color: #00e5ff;
+
+    box-shadow:
+        0 0 15px rgba(0, 229, 255, .3);
+}
+
+
+/* ==========================================
+   BOTÃO DE ENVIO
+========================================== */
+
+.ContainerContato button {
+    width: 100%;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00e5ff,
+            #004cff
+        );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+/* Hover */
+
+.ContainerContato button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 20px rgba(0, 229, 255, .5);
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .TituloContato {
+        margin-bottom: 45px;
+    }
+
+
+    .TituloContato h1 {
+        font-size: 42px;
+    }
+
+
+    .TituloContato p {
+        font-size: 17px;
+    }
+
+
+    .ContainerContato {
+        gap: 35px;
+    }
+
+
+    .Informacoes {
+        min-width: 220px;
+    }
+
+
+    .ContainerContato form {
+        min-width: 280px;
+    }
+
+
+    .Informacoes h2 {
+        font-size: 25px;
+    }
+
+
+    .Info {
+        font-size: 18px;
+    }
+}
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 600px) {
+
+    /* --------------------------------------
+       CONTAINER PRINCIPAL
+       
+       Remove espaço do antigo menu lateral
+    -------------------------------------- */
+
+    .ContainerContato {
+        width: 100%;
+
+        max-width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 35px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* --------------------------------------
+       TÍTULO
+    -------------------------------------- */
+
+    .TituloContato {
+        width: 100%;
+
+        margin-bottom: 35px;
+
+        padding: 0 10px;
+
+        box-sizing: border-box;
+    }
+
+
+    .TituloContato h1 {
+        font-size: 34px;
+
+        line-height: 1.2;
+    }
+
+
+    .TituloContato p {
+        font-size: 15px;
+
+        line-height: 1.6;
+
+        margin-top: 12px;
+    }
+
+
+    /* --------------------------------------
+       INFORMAÇÕES
+    -------------------------------------- */
+
+    .Informacoes {
+        width: 100%;
+
+        min-width: 0;
+
+        text-align: center;
+    }
+
+
+    .Informacoes h2 {
+        font-size: 24px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .Info {
+        margin-bottom: 18px;
+
+        font-size: 16px;
+
+        line-height: 1.6;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* --------------------------------------
+       FORMULÁRIO
+    -------------------------------------- */
+
+    .ContainerContato form {
+        width: 100%;
+
+        min-width: 0;
+
+        flex: none;
+
+        gap: 15px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* --------------------------------------
+       CAMPOS
+    -------------------------------------- */
+
+    .ContainerContato input,
+    .ContainerContato textarea {
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 15px;
+
+        box-sizing: border-box;
+
+        font-size: 15px;
+
+        border-radius: 12px;
+    }
+
+
+    .ContainerContato textarea {
+        min-height: 160px;
+    }
+
+
+    /* --------------------------------------
+       BOTÃO
+    -------------------------------------- */
+
+    .ContainerContato button {
+        width: 100%;
+
+        min-height: 52px;
+
+        padding: 15px;
+
+        font-size: 16px;
+
+        border-radius: 12px;
+    }
+
+
+    /* Remove movimento no celular */
+
+    .ContainerContato button:hover {
+        transform: none;
+
+        box-shadow: none;
+    }
+}
+
+
+/* ==========================================
+   CELULARES PEQUENOS
+========================================== */
+
+@media (max-width: 380px) {
+
+    .TituloContato {
+        padding: 0 5px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .TituloContato h1 {
+        font-size: 29px;
+    }
+
+
+    .TituloContato p {
+        font-size: 14px;
+    }
+
+
+    .ContainerContato {
+        gap: 30px;
+    }
+
+
+    .Informacoes h2 {
+        font-size: 22px;
+    }
+
+
+    .Info {
+        font-size: 14px;
+    }
+
+
+    .ContainerContato input,
+    .ContainerContato textarea {
+        padding: 14px;
+
+        font-size: 14px;
+    }
+
+
+    .ContainerContato textarea {
+        min-height: 140px;
+    }
+
+
+    .ContainerContato button {
+        font-size: 15px;
+    }
 }
