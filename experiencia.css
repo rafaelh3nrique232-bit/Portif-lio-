@@ -1,252 +1,676 @@
 /* ==========================================
-   Cabeçalho da página Experiência
+   CABEÇALHO DA PÁGINA EXPERIÊNCIA
 ========================================== */
 
-.Titulo{
-    display:flex;
-    align-items:center;
-    gap:25px;
-    margin-bottom:60px;
+.Titulo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 60px;
 }
+
 
 /* Ícone do título */
 
-.Titulo img{
-    width:70px;
+.Titulo img {
+    width: 70px;
+
+    height: auto;
+
+    object-fit: contain;
 }
+
 
 /* Título principal */
 
-.Titulo h1{
-    font-size:48px;
-    color:#00e5ff;
+.Titulo h1 {
+    font-size: 48px;
+
+    color: #00e5ff;
+
+    margin: 0;
+
+    line-height: 1.2;
 }
+
 
 /* Subtítulo */
 
-.Titulo p{
-    color:#bdbdbd;
-    font-size:20px;
+.Titulo p {
+    color: #bdbdbd;
+
+    font-size: 20px;
+
+    margin: 8px 0 0 0;
+
+    line-height: 1.5;
 }
+
 
 /* ==========================================
-   Container das experiências profissionais
+   CONTAINER DAS EXPERIÊNCIAS
 ========================================== */
 
-.Experiencias{
-    display:flex;
-    flex-direction:column;
-    gap:35px;
+.Experiencias {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 35px;
+
+    box-sizing: border-box;
 }
+
 
 /* ==========================================
-   Card de experiência profissional
+   CARD DE EXPERIÊNCIA PROFISSIONAL
 ========================================== */
 
-.ExperienciaCard{
-    background:#111;
+.ExperienciaCard {
+    width: 100%;
 
-    border:1px solid rgba(0,229,255,.25);
+    box-sizing: border-box;
 
-    border-radius:20px;
+    background: #111;
 
-    padding:35px;
+    border: 1px solid rgba(0, 229, 255, .25);
 
-    transition:.3s;
+    border-radius: 20px;
 
-    box-shadow:0 0 10px rgba(0,229,255,.15);
+    padding: 35px;
+
+    transition: .3s;
+
+    box-shadow:
+        0 0 10px rgba(0, 229, 255, .15);
 }
 
-/* Efeito ao passar o mouse sobre o card */
-
-.ExperienciaCard:hover{
-    transform:translateY(-8px);
-
-    box-shadow:0 0 20px rgba(0,229,255,.35);
-
-    border-color:#00e5ff;
-}
-
-/* ==========================================
-   Período da experiência
-========================================== */
-
-.Data{
-    background:#00e5ff;
-
-    color:black;
-
-    padding:8px 18px;
-
-    border-radius:20px;
-
-    font-weight:bold;
-}
-
-/* Cargo exercido */
-
-.ExperienciaCard h2{
-    margin-top:20px;
-
-    color:white;
-
-    font-size:32px;
-}
-
-/* Empresa */
-
-.ExperienciaCard h3{
-    color:#00e5ff;
-
-    margin-bottom:20px;
-}
-
-/* ==========================================
-   Lista de atividades desenvolvidas
-========================================== */
-
-.ExperienciaCard ul{
-
-    list-style:none;
-
-    padding:0;
-
-}
-
-/* Cada item da lista */
-
-.ExperienciaCard li{
-
-    margin:15px 0;
-
-    padding-left:20px;
-
-    position:relative;
-
-    color:#d9d9d9;
-}
-
-/* Ícone de confirmação antes de cada item */
-
-.ExperienciaCard li::before{
-
-    content:"✓";
-
-    position:absolute;
-
-    left:0;
-
-    color:#00e5ff;
-}
-
-/* ==========================================
-   Seção de tecnologias utilizadas
-========================================== */
-
-.Tecnologias{
-
-    margin-top:70px;
-
-}
-
-/* Título da seção */
-
-.Tecnologias h2{
-
-    color:#00e5ff;
-
-    margin-bottom:25px;
-
-}
-
-/* Container das tecnologias */
-
-.Skills{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:15px;
-
-}
-
-/* Botão individual de tecnologia */
-
-.Skills span{
-
-    border:1px solid #00e5ff;
-
-    padding:10px 20px;
-
-    border-radius:50px;
-
-    transition:.3s;
-
-}
 
 /* Efeito ao passar o mouse */
 
-.Skills span:hover{
+.ExperienciaCard:hover {
+    transform: translateY(-8px);
 
-    background:#00e5ff;
+    box-shadow:
+        0 0 20px rgba(0, 229, 255, .35);
 
-    color:black;
-
+    border-color: #00e5ff;
 }
+
 
 /* ==========================================
-   Seção de estatísticas profissionais
+   PERÍODO DA EXPERIÊNCIA
 ========================================== */
 
-.Estatisticas{
+.Data {
+    display: inline-block;
 
-    margin-top:70px;
+    background: #00e5ff;
 
-    display:flex;
+    color: black;
 
-    justify-content:space-between;
+    padding: 8px 18px;
 
-    flex-wrap:wrap;
+    border-radius: 20px;
 
-    gap:20px;
+    font-weight: bold;
 
+    line-height: 1.2;
 }
+
+
+/* ==========================================
+   CARGO
+========================================== */
+
+.ExperienciaCard h2 {
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+
+    color: white;
+
+    font-size: 32px;
+
+    line-height: 1.25;
+}
+
+
+/* ==========================================
+   EMPRESA
+========================================== */
+
+.ExperienciaCard h3 {
+    color: #00e5ff;
+
+    margin-top: 0;
+
+    margin-bottom: 20px;
+
+    font-size: 20px;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   LISTA DE ATIVIDADES
+========================================== */
+
+.ExperienciaCard ul {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+
+/* Cada atividade */
+
+.ExperienciaCard li {
+    margin: 15px 0;
+
+    padding-left: 20px;
+
+    position: relative;
+
+    color: #d9d9d9;
+
+    line-height: 1.6;
+}
+
+
+/* Ícone de confirmação */
+
+.ExperienciaCard li::before {
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    color: #00e5ff;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   TECNOLOGIAS
+========================================== */
+
+.Tecnologias {
+    width: 100%;
+
+    margin-top: 70px;
+
+    box-sizing: border-box;
+}
+
+
+/* Título */
+
+.Tecnologias h2 {
+    color: #00e5ff;
+
+    margin-top: 0;
+
+    margin-bottom: 25px;
+
+    font-size: 28px;
+}
+
+
+/* Container */
+
+.Skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+
+/* Tecnologia individual */
+
+.Skills span {
+    border: 1px solid #00e5ff;
+
+    padding: 10px 20px;
+
+    border-radius: 50px;
+
+    transition: .3s;
+
+    color: white;
+
+    white-space: nowrap;
+}
+
+
+/* Hover */
+
+.Skills span:hover {
+    background: #00e5ff;
+
+    color: black;
+}
+
+
+/* ==========================================
+   ESTATÍSTICAS PROFISSIONAIS
+========================================== */
+
+.Estatisticas {
+    width: 100%;
+
+    margin-top: 70px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    box-sizing: border-box;
+}
+
 
 /* Card de estatística */
 
-.Estatisticas div{
+.Estatisticas div {
+    flex: 1;
 
-    flex:1;
+    min-width: 220px;
 
-    min-width:220px;
+    background: #111;
 
-    background:#111;
+    border: 1px solid rgba(0, 229, 255, .25);
 
-    border:1px solid rgba(0,229,255,.25);
+    border-radius: 20px;
 
-    border-radius:20px;
+    padding: 30px;
 
-    padding:30px;
+    text-align: center;
 
-    text-align:center;
-
+    box-sizing: border-box;
 }
 
-/* Número em destaque */
 
-.Estatisticas h2{
+/* Número */
 
-    font-size:50px;
+.Estatisticas h2 {
+    font-size: 50px;
 
-    color:#00e5ff;
+    color: #00e5ff;
 
+    margin: 0 0 10px 0;
 }
 
-/* Texto descritivo */
 
-.Estatisticas p{
+/* Texto */
 
-    color:#d9d9d9;
+.Estatisticas p {
+    color: #d9d9d9;
 
+    margin: 0;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .Titulo {
+        gap: 18px;
+
+        margin-bottom: 45px;
+    }
+
+
+    .Titulo img {
+        width: 55px;
+    }
+
+
+    .Titulo h1 {
+        font-size: 40px;
+    }
+
+
+    .Titulo p {
+        font-size: 18px;
+    }
+
+
+    .ExperienciaCard {
+        padding: 28px;
+    }
+
+
+    .ExperienciaCard h2 {
+        font-size: 28px;
+    }
+
+
+    .Estatisticas div {
+        min-width: calc(50% - 10px);
+    }
+}
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 600px) {
+
+    /* --------------------------------------
+       PÁGINA
+       
+       Remove espaço do antigo menu lateral
+    -------------------------------------- */
+
+    .Pagina,
+    .PaginaExperiencia,
+    main {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin-left: 0 !important;
+
+        margin-right: 0 !important;
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* --------------------------------------
+       CABEÇALHO
+    -------------------------------------- */
+
+    .Titulo {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 10px;
+
+        margin-bottom: 35px;
+
+        text-align: center;
+    }
+
+
+    .Titulo img {
+        width: 50px;
+
+        height: 50px;
+    }
+
+
+    .Titulo h1 {
+        font-size: 34px;
+
+        line-height: 1.2;
+
+        margin: 0;
+    }
+
+
+    .Titulo p {
+        font-size: 16px;
+
+        line-height: 1.5;
+
+        margin: 0;
+
+        max-width: 350px;
+    }
+
+
+    /* --------------------------------------
+       EXPERIÊNCIAS
+    -------------------------------------- */
+
+    .Experiencias {
+        width: 100%;
+
+        gap: 20px;
+    }
+
+
+    /* --------------------------------------
+       CARD
+    -------------------------------------- */
+
+    .ExperienciaCard {
+        width: 100%;
+
+        padding: 22px 18px;
+
+        box-sizing: border-box;
+
+        border-radius: 16px;
+    }
+
+
+    /* Remove animação no touch */
+
+    .ExperienciaCard:hover {
+        transform: none;
+
+        box-shadow:
+            0 0 10px rgba(0, 229, 255, .15);
+    }
+
+
+    /* --------------------------------------
+       DATA
+    -------------------------------------- */
+
+    .Data {
+        font-size: 13px;
+
+        padding: 7px 14px;
+    }
+
+
+    /* --------------------------------------
+       CARGO
+    -------------------------------------- */
+
+    .ExperienciaCard h2 {
+        font-size: 25px;
+
+        line-height: 1.3;
+
+        margin-top: 18px;
+
+        margin-bottom: 8px;
+    }
+
+
+    /* --------------------------------------
+       EMPRESA
+    -------------------------------------- */
+
+    .ExperienciaCard h3 {
+        font-size: 18px;
+
+        line-height: 1.4;
+
+        margin-bottom: 18px;
+    }
+
+
+    /* --------------------------------------
+       ATIVIDADES
+    -------------------------------------- */
+
+    .ExperienciaCard li {
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        margin: 12px 0;
+
+        padding-left: 20px;
+    }
+
+
+    /* --------------------------------------
+       TECNOLOGIAS
+    -------------------------------------- */
+
+    .Tecnologias {
+        margin-top: 45px;
+    }
+
+
+    .Tecnologias h2 {
+        font-size: 24px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .Skills {
+        gap: 10px;
+    }
+
+
+    .Skills span {
+        padding: 8px 14px;
+
+        font-size: 13px;
+    }
+
+
+    /* --------------------------------------
+       ESTATÍSTICAS
+    -------------------------------------- */
+
+    .Estatisticas {
+        margin-top: 45px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding-bottom: 90px;
+    }
+
+
+    .Estatisticas div {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 22px 15px;
+
+        border-radius: 16px;
+    }
+
+
+    .Estatisticas h2 {
+        font-size: 40px;
+    }
+
+
+    .Estatisticas p {
+        font-size: 14px;
+    }
+}
+
+
+/* ==========================================
+   CELULARES PEQUENOS
+========================================== */
+
+@media (max-width: 380px) {
+
+    .Titulo {
+        margin-bottom: 30px;
+    }
+
+
+    .Titulo img {
+        width: 45px;
+
+        height: 45px;
+    }
+
+
+    .Titulo h1 {
+        font-size: 30px;
+    }
+
+
+    .Titulo p {
+        font-size: 14px;
+    }
+
+
+    .ExperienciaCard {
+        padding: 20px 15px;
+    }
+
+
+    .ExperienciaCard h2 {
+        font-size: 22px;
+    }
+
+
+    .ExperienciaCard h3 {
+        font-size: 17px;
+    }
+
+
+    .ExperienciaCard li {
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    .Tecnologias h2 {
+        font-size: 22px;
+    }
+
+
+    .Skills span {
+        padding: 7px 12px;
+
+        font-size: 12px;
+    }
+
+
+    .Estatisticas h2 {
+        font-size: 36px;
+    }
 }
