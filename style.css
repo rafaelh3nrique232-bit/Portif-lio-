@@ -318,7 +318,8 @@ main{
 }
 
 /* ==========================================
-   AJUSTE DO CONTEÚDO NO MOBILE
+   LAYOUT MOBILE
+   Menu passa para a parte inferior
 ========================================== */
 
 @media (max-width: 600px) {
@@ -327,29 +328,165 @@ main{
     body {
         width: 100%;
         max-width: 100%;
+
         margin: 0;
         padding: 0;
+
         overflow-x: hidden;
     }
 
-    /* Remove espaço reservado para menu lateral */
 
-    .PaginaPerfil,
-    .Pagina,
-    main,
-    section {
-        margin-left: 0 !important;
-    }
+    /* ======================================
+       ÁREA PRINCIPAL
+    ====================================== */
 
-    /* Conteúdo ocupa toda a tela */
-
-    .PaginaPerfil {
+    main {
         width: 100% !important;
+
         max-width: 100% !important;
 
-        padding-left: 15px !important;
-        padding-right: 15px !important;
+        margin-left: 0 !important;
+
+        margin-right: 0 !important;
+
+        padding: 30px 15px 100px 15px !important;
 
         box-sizing: border-box;
+
+        align-items: center;
+    }
+
+
+    /* ======================================
+       CONTAINERS DAS PÁGINAS
+    ====================================== */
+
+    .Pagina,
+    .PaginaPerfil {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin-left: 0 !important;
+
+        margin-right: 0 !important;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ======================================
+       SEÇÕES
+       
+       IMPORTANTE:
+       Não colocar width: 100% em toda section
+       indiscriminadamente, pois algumas seções
+       podem ter seu próprio layout.
+    ====================================== */
+
+    .Pagina > section,
+    .PaginaPerfil > section {
+
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ======================================
+       MENU INFERIOR
+    ====================================== */
+
+    .Menu {
+
+        left: 50%;
+
+        right: auto;
+
+        top: auto;
+
+        bottom: 12px;
+
+        transform: translateX(-50%);
+
+        width: calc(100% - 30px);
+
+        max-width: 400px;
+
+        height: 58px;
+
+        padding: 0 15px;
+
+        box-sizing: border-box;
+
+        border-radius: 999px;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-around;
+
+        gap: 0;
+
+        background: rgba(22, 22, 22, 0.95);
+
+        backdrop-filter: blur(10px);
+
+        -webkit-backdrop-filter: blur(10px);
+
+        z-index: 1000;
+    }
+
+
+    /* ======================================
+       LINKS DO MENU
+    ====================================== */
+
+    .Menu a {
+
+        width: 42px;
+
+        height: 42px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-radius: 50%;
+
+        flex-shrink: 0;
+    }
+
+
+    /* ======================================
+       ÍCONES
+    ====================================== */
+
+    .Menu img,
+    .Menu i {
+
+        max-width: 24px;
+
+        max-height: 24px;
+
+        object-fit: contain;
+    }
+
+
+    /* ======================================
+       HOVER
+    ====================================== */
+
+    .Menu a:hover {
+
+        transform: scale(1.1);
+
+        color: #00e5ff;
     }
 }
