@@ -5,90 +5,236 @@
 .Sobre {
     width: 100%;
 
-    display: flex;
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
 
     align-items: center;
 
-    gap: 30px;
+    gap: 45px;
 
-    padding: 30px;
+    padding: 40px;
 
     box-sizing: border-box;
 
-    border: 1px solid #00e5ff;
+    background:
+        linear-gradient(
+            145deg,
+            #080808,
+            #0d0d0d
+        );
 
-    border-radius: 18px;
+    border: 1px solid rgba(0, 229, 255, 0.18);
 
-    background: black;
+    border-radius: 24px;
+
+    position: relative;
+
+    overflow: hidden;
 
     box-shadow:
-        0 0 5px rgba(0, 229, 255, 0.2),
-        0 0 15px rgba(0, 229, 255, 0.1);
+        0 10px 40px rgba(0, 0, 0, 0.4);
+
+    transition: 0.3s ease;
 }
 
 
 /* ==========================================
-   TEXTO SOBRE
+   DETALHE NEON DA SEÇÃO
 ========================================== */
 
-.TextoSobre {
-    flex: 1;
+.Sobre::before {
+    content: "";
 
-    min-width: 0;
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 120px;
+
+    height: 3px;
+
+    background: linear-gradient(
+        to right,
+        #00e5ff,
+        transparent
+    );
+
+    box-shadow:
+        0 0 10px #00e5ff;
 }
 
 
-/* Título */
+.Sobre::after {
+    content: "";
 
-.TextoSobre h1 {
-    text-align: center;
+    position: absolute;
 
-    font-size: 36px;
-
-    color: #0a1bff;
-
-    margin-top: 0;
-
-    margin-bottom: 20px;
-
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-/* Texto */
-
-.TextoSobre p {
-    font-size: 18px;
-
-    text-align: justify;
-
-    line-height: 1.7;
-
-    color: white;
-
-    margin: 0;
-}
-
-
-/* ==========================================
-   FOTO SOBRE MIM
-========================================== */
-
-.FTSobre {
     width: 180px;
 
     height: 180px;
+
+    right: -100px;
+
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 229, 255, 0.05);
+
+    filter: blur(30px);
+
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   FOTO
+========================================== */
+
+.FTSobre {
+    width: 190px;
+
+    height: 190px;
 
     border-radius: 50%;
 
     object-fit: cover;
 
-    flex-shrink: 0;
+    display: block;
+
+    margin: 0 auto;
+
+    border: 2px solid rgba(0, 229, 255, 0.7);
 
     box-shadow:
-        0 0 5px #00e5ff,
-        0 0 15px #00e5ff,
-        0 0 25px #00e5ff;
+        0 0 10px rgba(0, 229, 255, 0.4),
+        0 0 30px rgba(0, 229, 255, 0.15);
+
+    position: relative;
+
+    z-index: 1;
+
+    transition: 0.4s ease;
+}
+
+
+/* Efeito da foto */
+
+.FTSobre:hover {
+    transform: scale(1.04);
+
+    border-color: #00e5ff;
+
+    box-shadow:
+        0 0 12px rgba(0, 229, 255, 0.6),
+        0 0 35px rgba(0, 229, 255, 0.25);
+}
+
+
+/* ==========================================
+   ÁREA DO TEXTO
+========================================== */
+
+.TextoSobre {
+    position: relative;
+
+    z-index: 2;
+
+    min-width: 0;
+}
+
+
+/* ==========================================
+   PEQUENO TÍTULO
+========================================== */
+
+.TextoSobre::before {
+    content: "SOBRE MIM";
+
+    display: block;
+
+    color: #00e5ff;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==========================================
+   TÍTULO PRINCIPAL
+========================================== */
+
+.TextoSobre h1 {
+    text-align: left;
+
+    font-size: 38px;
+
+    color: white;
+
+    margin: 0 0 18px 0;
+
+    line-height: 1.2;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==========================================
+   DESTAQUE DO TÍTULO
+========================================== */
+
+.TextoSobre h1 span {
+    background: linear-gradient(
+        to right,
+        #00e5ff,
+        #0066ff
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+
+/* ==========================================
+   TEXTO
+========================================== */
+
+.TextoSobre p {
+    font-size: 17px;
+
+    color: #cfcfcf;
+
+    text-align: left;
+
+    line-height: 1.8;
+
+    margin: 0;
+
+    max-width: 800px;
+}
+
+
+/* ==========================================
+   DESTAQUE PARA PALAVRAS IMPORTANTES
+========================================== */
+
+.TextoSobre strong {
+    color: white;
+
+    font-weight: 600;
 }
 
 
@@ -99,12 +245,14 @@
 .formacao {
     width: 100%;
 
+    margin-top: 70px;
+
     box-sizing: border-box;
 }
 
 
 /* ==========================================
-   TÍTULO FORMAÇÃO
+   TÍTULO DA FORMAÇÃO
 ========================================== */
 
 .TituloFormacao {
@@ -114,29 +262,25 @@
 
     align-items: center;
 
-    gap: 15px;
+    gap: 12px;
 
     margin-bottom: 30px;
 }
 
 
-/* Ícone */
-
 .TituloFormacao img {
-    width: 40px;
+    width: 38px;
 
-    height: 40px;
+    height: 38px;
 
     object-fit: contain;
 }
 
 
-/* Título */
-
 .TituloFormacao h1 {
-    font-size: 32px;
+    font-size: 30px;
 
-    color: #0a1bff;
+    color: white;
 
     margin: 0;
 
@@ -144,20 +288,25 @@
 }
 
 
+.TituloFormacao h1::first-letter {
+    color: #00e5ff;
+}
+
+
 /* ==========================================
-   CARDS FORMAÇÃO
+   CARDS DA FORMAÇÃO
 ========================================== */
 
 .CardsFormacao {
     width: 100%;
 
-    display: flex;
+    display: grid;
 
-    justify-content: center;
-
-    align-items: stretch;
-
-    flex-wrap: wrap;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
 
     gap: 20px;
 
@@ -165,41 +314,80 @@
 }
 
 
-/* Card */
+/* ==========================================
+   CARD DE FORMAÇÃO
+========================================== */
 
 .CardFormacao {
-    width: 240px;
+    width: 100%;
 
-    min-height: 140px;
+    min-height: 150px;
 
-    padding: 20px;
+    padding: 25px;
 
     box-sizing: border-box;
 
+    background:
+        linear-gradient(
+            145deg,
+            #0b0b0b,
+            #111
+        );
+
+    border: 1px solid rgba(0, 229, 255, 0.15);
+
     border-radius: 18px;
 
-    border: 1px solid rgba(0, 229, 255, 0.25);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
 
-    background: black;
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+
+/* Linha superior */
+
+.CardFormacao::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 50px;
+
+    height: 2px;
+
+    background: #00e5ff;
 
     box-shadow:
-        0 0 5px #00e5ff,
-        0 0 10px rgba(0, 229, 255, 0.5);
-
-    transition: 0.3s;
+        0 0 8px #00e5ff;
 }
 
 
 /* Hover */
 
 .CardFormacao:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 
-    border-color: #00e5ff;
+    border-color:
+        rgba(0, 229, 255, 0.5);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.5),
+        0 0 15px rgba(0, 229, 255, 0.12);
 }
 
 
-/* Título do card */
+/* ==========================================
+   TÍTULO DO CARD
+========================================== */
 
 .CardFormacao h1 {
     font-size: 18px;
@@ -208,22 +396,24 @@
 
     font-weight: bold;
 
-    margin: 0 0 8px 0;
+    margin: 0 0 12px 0;
 
-    line-height: 1.3;
+    line-height: 1.4;
 }
 
 
-/* Texto */
+/* ==========================================
+   TEXTO DO CARD
+========================================== */
 
 .CardFormacao p {
-    font-size: 15px;
+    font-size: 14px;
 
     color: #00e5ff;
 
     margin: 0;
 
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 
@@ -233,6 +423,8 @@
 
 .Experiencia {
     width: 100%;
+
+    margin-top: 70px;
 
     box-sizing: border-box;
 }
@@ -249,29 +441,25 @@
 
     align-items: center;
 
-    gap: 15px;
+    gap: 12px;
 
     margin-bottom: 30px;
 }
 
 
-/* Ícone */
-
 .TituloExperiencia img {
-    width: 40px;
+    width: 38px;
 
-    height: 40px;
+    height: 38px;
 
     object-fit: contain;
 }
 
 
-/* Título */
-
 .TituloExperiencia h1 {
-    font-size: 32px;
+    font-size: 30px;
 
-    color: #0a1bff;
+    color: white;
 
     margin: 0;
 
@@ -280,38 +468,44 @@
 
 
 /* ==========================================
-   CARD DE EXPERIÊNCIA
+   CARD DE PERFIL / EXPERIÊNCIA
 ========================================== */
 
 .CardPerfil {
     width: 100%;
 
-    padding: 25px;
+    padding: 30px;
 
     margin-bottom: 20px;
 
     box-sizing: border-box;
 
-    background: black;
+    background:
+        linear-gradient(
+            145deg,
+            #0b0b0b,
+            #111
+        );
 
     border-radius: 18px;
 
-    border: 1px solid rgba(0, 229, 255, 0.25);
+    border: 1px solid rgba(0, 229, 255, 0.15);
 
     box-shadow:
-        0 0 5px #00e5ff,
-        0 0 10px rgba(0, 229, 255, 0.5);
+        0 8px 25px rgba(0, 0, 0, 0.35);
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-
-/* Hover */
 
 .CardPerfil:hover {
     transform: translateY(-5px);
 
-    border-color: #00e5ff;
+    border-color:
+        rgba(0, 229, 255, 0.5);
+
+    box-shadow:
+        0 0 20px rgba(0, 229, 255, 0.12);
 }
 
 
@@ -320,13 +514,13 @@
 ========================================== */
 
 .CardPerfil h1 {
-    color: #00e5ff;
+    color: white;
 
-    font-size: 34px;
+    font-size: 30px;
 
     margin: 0 0 8px 0;
 
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 
@@ -337,35 +531,39 @@
 .CardPerfil span {
     display: block;
 
-    font-size: 28px;
+    font-size: 22px;
 
-    background: linear-gradient(
-        to right,
-        #85f3ff,
-        #d2fbff
-    );
+    font-weight: 600;
+
+    background:
+        linear-gradient(
+            to right,
+            #00e5ff,
+            #0066ff
+        );
 
     -webkit-background-clip: text;
+
     -webkit-text-fill-color: transparent;
 
     background-clip: text;
 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
-    line-height: 1.3;
+    line-height: 1.4;
 }
 
 
 /* ==========================================
-   DESCRIÇÃO DA EXPERIÊNCIA
+   DESCRIÇÃO
 ========================================== */
 
 .CardPerfil p {
     font-size: 16px;
 
-    line-height: 1.6;
+    color: #cfcfcf;
 
-    color: white;
+    line-height: 1.7;
 
     margin: 0;
 }
@@ -378,16 +576,18 @@
 @media (max-width: 900px) {
 
     .Sobre {
-        gap: 25px;
+        grid-template-columns: 180px 1fr;
 
-        padding: 25px;
+        gap: 30px;
+
+        padding: 30px;
     }
 
 
     .FTSobre {
-        width: 160px;
+        width: 155px;
 
-        height: 160px;
+        height: 155px;
     }
 
 
@@ -397,29 +597,13 @@
 
 
     .TextoSobre p {
-        font-size: 17px;
+        font-size: 16px;
     }
 
 
     .CardsFormacao {
-        gap: 15px;
-    }
-
-
-    .CardFormacao {
-        width: calc(50% - 10px);
-
-        max-width: none;
-    }
-
-
-    .CardPerfil h1 {
-        font-size: 30px;
-    }
-
-
-    .CardPerfil span {
-        font-size: 24px;
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 }
 
@@ -429,21 +613,6 @@
 ========================================== */
 
 @media (max-width: 600px) {
-
-    /* --------------------------------------
-       CONTEÚDO PRINCIPAL
-    -------------------------------------- */
-
-    .PaginaPerfil {
-        width: 100%;
-
-        margin-left: 0;
-
-        padding: 30px 15px 100px 15px;
-
-        box-sizing: border-box;
-    }
-
 
     /* ======================================
        SOBRE MIM
@@ -460,15 +629,22 @@
 
         justify-content: center;
 
-        gap: 20px;
+        gap: 25px;
 
-        padding: 25px 20px;
-
-        box-sizing: border-box;
+        padding: 30px 20px;
 
         text-align: center;
 
-        border-radius: 18px;
+        border-radius: 20px;
+    }
+
+
+    /* --------------------------------------
+       DETALHE SUPERIOR
+    -------------------------------------- */
+
+    .Sobre::before {
+        width: 80px;
     }
 
 
@@ -477,16 +653,11 @@
     -------------------------------------- */
 
     .FTSobre {
-        width: 150px;
+        width: 145px;
 
-        height: 150px;
+        height: 145px;
 
         margin: 0 auto;
-
-        box-shadow:
-            0 0 5px #00e5ff,
-            0 0 12px #00e5ff,
-            0 0 20px rgba(0, 229, 255, 0.7);
     }
 
 
@@ -501,27 +672,34 @@
     }
 
 
-    /* Título */
+    .TextoSobre::before {
+        font-size: 11px;
+
+        letter-spacing: 2.5px;
+
+        margin-bottom: 8px;
+    }
+
 
     .TextoSobre h1 {
         font-size: 28px;
 
-        margin: 0 0 15px 0;
-
         text-align: center;
+
+        margin-bottom: 15px;
+
+        line-height: 1.25;
     }
 
-
-    /* Parágrafo */
 
     .TextoSobre p {
         font-size: 15px;
 
-        line-height: 1.7;
-
         text-align: center;
 
-        margin: 0;
+        line-height: 1.75;
+
+        color: #c7c7c7;
     }
 
 
@@ -530,15 +708,9 @@
     ====================================== */
 
     .formacao {
-        width: 100%;
-
-        margin-top: 40px;
+        margin-top: 45px;
     }
 
-
-    /* --------------------------------------
-       TÍTULO FORMAÇÃO
-    -------------------------------------- */
 
     .TituloFormacao {
         gap: 10px;
@@ -548,20 +720,16 @@
 
 
     .TituloFormacao img {
-        width: 32px;
+        width: 30px;
 
-        height: 32px;
+        height: 30px;
     }
 
 
     .TituloFormacao h1 {
-        font-size: 27px;
+        font-size: 25px;
     }
 
-
-    /* --------------------------------------
-       CARDS FORMAÇÃO
-    -------------------------------------- */
 
     .CardsFormacao {
         width: 100%;
@@ -570,7 +738,7 @@
 
         flex-direction: column;
 
-        align-items: center;
+        align-items: stretch;
 
         gap: 15px;
     }
@@ -579,13 +747,9 @@
     .CardFormacao {
         width: 100%;
 
-        max-width: 420px;
-
         min-height: auto;
 
         padding: 20px;
-
-        box-sizing: border-box;
 
         text-align: center;
 
@@ -594,9 +758,7 @@
 
 
     .CardFormacao h1 {
-        font-size: 18px;
-
-        line-height: 1.4;
+        font-size: 17px;
 
         margin-bottom: 8px;
     }
@@ -604,12 +766,8 @@
 
     .CardFormacao p {
         font-size: 14px;
-
-        line-height: 1.5;
     }
 
-
-    /* Desativa movimento no touch */
 
     .CardFormacao:hover {
         transform: none;
@@ -621,15 +779,9 @@
     ====================================== */
 
     .Experiencia {
-        width: 100%;
-
-        margin-top: 40px;
+        margin-top: 45px;
     }
 
-
-    /* --------------------------------------
-       TÍTULO EXPERIÊNCIA
-    -------------------------------------- */
 
     .TituloExperiencia {
         gap: 10px;
@@ -639,51 +791,37 @@
 
 
     .TituloExperiencia img {
-        width: 32px;
+        width: 30px;
 
-        height: 32px;
+        height: 30px;
     }
 
 
     .TituloExperiencia h1 {
-        font-size: 27px;
+        font-size: 25px;
     }
 
 
-    /* --------------------------------------
-       CARD EXPERIÊNCIA
-    -------------------------------------- */
-
     .CardPerfil {
-        width: 100%;
-
-        padding: 20px;
-
-        margin-bottom: 15px;
-
-        box-sizing: border-box;
-
-        border-radius: 16px;
+        padding: 22px 18px;
 
         text-align: center;
+
+        border-radius: 16px;
     }
 
 
     .CardPerfil h1 {
-        font-size: 25px;
+        font-size: 24px;
 
         line-height: 1.3;
-
-        margin-bottom: 8px;
     }
 
 
     .CardPerfil span {
-        font-size: 20px;
+        font-size: 19px;
 
         line-height: 1.4;
-
-        margin-bottom: 12px;
     }
 
 
@@ -691,12 +829,8 @@
         font-size: 14px;
 
         line-height: 1.7;
-
-        text-align: center;
     }
 
-
-    /* Desativa movimento no touch */
 
     .CardPerfil:hover {
         transform: none;
@@ -710,30 +844,17 @@
 
 @media (max-width: 380px) {
 
-    .PaginaPerfil {
-        padding-left: 12px;
-
-        padding-right: 12px;
-
-        padding-bottom: 95px;
-    }
-
-
-    /* --------------------------------------
-       SOBRE
-    -------------------------------------- */
-
     .Sobre {
-        padding: 20px 15px;
+        padding: 25px 15px;
 
-        gap: 15px;
+        gap: 20px;
     }
 
 
     .FTSobre {
-        width: 130px;
+        width: 125px;
 
-        height: 130px;
+        height: 125px;
     }
 
 
@@ -745,23 +866,13 @@
     .TextoSobre p {
         font-size: 14px;
 
-        line-height: 1.6;
+        line-height: 1.65;
     }
 
 
-    /* --------------------------------------
-       FORMAÇÃO
-    -------------------------------------- */
-
-    .TituloFormacao h1 {
-        font-size: 24px;
-    }
-
-
-    .TituloFormacao img {
-        width: 28px;
-
-        height: 28px;
+    .TituloFormacao h1,
+    .TituloExperiencia h1 {
+        font-size: 22px;
     }
 
 
@@ -770,34 +881,8 @@
     }
 
 
-    .CardFormacao h1 {
-        font-size: 17px;
-    }
-
-
-    .CardFormacao p {
-        font-size: 13px;
-    }
-
-
-    /* --------------------------------------
-       EXPERIÊNCIA
-    -------------------------------------- */
-
-    .TituloExperiencia h1 {
-        font-size: 24px;
-    }
-
-
-    .TituloExperiencia img {
-        width: 28px;
-
-        height: 28px;
-    }
-
-
     .CardPerfil {
-        padding: 18px 15px;
+        padding: 20px 15px;
     }
 
 
@@ -807,7 +892,7 @@
 
 
     .CardPerfil span {
-        font-size: 18px;
+        font-size: 17px;
     }
 
 
