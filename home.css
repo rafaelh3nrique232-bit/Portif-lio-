@@ -23,10 +23,16 @@
 
 .BoasVindas h1 {
     color: aliceblue;
+
     font-size: 70px;
+
     font-family: Arial, Helvetica, sans-serif;
+
     margin-bottom: 0;
 }
+
+
+/* Nome em destaque */
 
 .BoasVindas h1 span {
     background: linear-gradient(to right, #00e5ff, #0011ff);
@@ -37,8 +43,12 @@
     background-clip: text;
 }
 
+
+/* Texto principal */
+
 .BoasVindas p {
     color: rgb(255, 255, 255);
+
     font-size: 25px;
 
     margin-top: 5px;
@@ -54,16 +64,18 @@
 
 .texto p {
     color: white;
+
     font-size: 15px;
 }
 
 
 /* ==========================================
-   BOTÃO - VISUALIZAR
+   BOTÃO "CONFIRA MAIS SOBRE MIM"
 ========================================== */
 
 .Visualizar {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -75,6 +87,8 @@
 
     background: linear-gradient(to right, #00e5ff, #0011ff);
 
+    border: none;
+
     color: white;
 
     text-decoration: none;
@@ -84,22 +98,23 @@
 
 .Visualizar:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 12px rgba(0, 229, 255, 0.5);
+
+    box-shadow:
+        0 0 10px rgba(0, 229, 255, 0.5);
 }
 
 
 /* ==========================================
-   BOTÃO - DOWNLOAD CV
+   BOTÃO "DOWNLOAD CV"
 ========================================== */
 
 .CV {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
     padding: 12px 16px;
-
-    text-decoration: none;
 
     cursor: pointer;
 
@@ -111,6 +126,8 @@
 
     color: white;
 
+    text-decoration: none;
+
     box-shadow: 0 0 5px #6ef0ff;
 
     transition: 0.3s;
@@ -118,7 +135,9 @@
 
 .CV:hover {
     background: #00e5ff;
+
     color: black;
+
     transform: translateY(-2px);
 }
 
@@ -132,9 +151,12 @@
 
     justify-content: center;
 
+    align-items: stretch;
+
     gap: 25px;
 
     margin-top: 70px;
+
     margin-bottom: 20px;
 
     flex-wrap: wrap;
@@ -156,7 +178,7 @@
 
     background: #000000;
 
-    border: 1px solid rgba(0, 229, 255, .25);
+    border: 1px solid rgba(0, 229, 255, 0.25);
 
     border-radius: 18px;
 
@@ -169,18 +191,71 @@
     transition: 0.3s;
 }
 
+
+/* Efeito ao passar o mouse */
+
 .Card:hover {
     transform: translateY(-8px);
 
     border-color: #00e5ff;
 
     box-shadow:
-        0 0 15px rgba(0, 229, 255, .4);
+        0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+
+/* ==========================================
+   IMAGEM / ÍCONE DOS CARDS
+========================================== */
+
+.Card img {
+    width: 50px;
+
+    height: 50px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
 
 
 /* ==========================================
    CONTEÚDO DOS CARDS
+========================================== */
+
+.textocard {
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+.textocard h1 {
+    color: #00e5ff;
+
+    margin: 0 0 12px 0;
+
+    font-size: 28px;
+
+    line-height: 1.2;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.textocard p {
+    color: #cfcfcf;
+
+    margin: 0;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   REGRAS DOS TÍTULOS DOS CARDS
 ========================================== */
 
 .Card h1 {
@@ -203,39 +278,6 @@
 
 
 /* ==========================================
-   TEXTO DOS CARDS
-========================================== */
-
-.textocard {
-    display: flex;
-
-    flex-direction: column;
-
-    min-width: 0;
-}
-
-.textocard h1 {
-    color: #00e5ff;
-
-    margin: 0 0 12px 0;
-
-    font-size: 28px;
-
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.textocard p {
-    color: #cfcfcf;
-
-    margin: 0;
-
-    line-height: 1.7;
-
-    font-size: 16px;
-}
-
-
-/* ==========================================
    ÁREA DOS BOTÕES
 ========================================== */
 
@@ -243,6 +285,8 @@
     display: flex;
 
     align-items: center;
+
+    justify-content: center;
 
     gap: 10px;
 
@@ -258,15 +302,23 @@
 
 @media (max-width: 900px) {
 
+    /* Foto */
+
     .Perfil {
         width: 300px;
 
         margin-top: 20px;
     }
 
+
+    /* Título */
+
     .BoasVindas h1 {
         font-size: 52px;
     }
+
+
+    /* Texto */
 
     .BoasVindas p {
         font-size: 21px;
@@ -279,6 +331,9 @@
 
         line-height: 1.6;
     }
+
+
+    /* Cards */
 
     .Cards {
         gap: 20px;
@@ -293,6 +348,9 @@
 
         min-height: 150px;
     }
+
+
+    /* Botões */
 
     .botao {
         justify-content: center;
@@ -310,9 +368,9 @@
 
 @media (max-width: 600px) {
 
-    /* ------------------------------------------
+    /* ======================================
        FOTO
-    ------------------------------------------ */
+    ====================================== */
 
     .Perfil {
         width: 220px;
@@ -330,9 +388,9 @@
     }
 
 
-    /* ------------------------------------------
+    /* ======================================
        BOAS-VINDAS
-    ------------------------------------------ */
+    ====================================== */
 
     .BoasVindas {
         width: 100%;
@@ -365,9 +423,9 @@
     }
 
 
-    /* ------------------------------------------
-       TEXTO
-    ------------------------------------------ */
+    /* ======================================
+       TEXTO COMPLEMENTAR
+    ====================================== */
 
     .texto {
         width: 100%;
@@ -386,9 +444,9 @@
     }
 
 
-    /* ------------------------------------------
+    /* ======================================
        CARDS
-    ------------------------------------------ */
+    ====================================== */
 
     .Cards {
         width: 100%;
@@ -416,6 +474,11 @@
         padding: 0 20px;
     }
 
+
+    /* ======================================
+       CARD MOBILE
+    ====================================== */
+
     .Card {
         width: 100%;
 
@@ -425,26 +488,69 @@
 
         min-height: 0;
 
-        padding: 22px;
+        padding: 25px 20px;
 
         box-sizing: border-box;
 
         display: flex;
 
-        align-items: flex-start;
+        flex-direction: column;
 
-        gap: 15px;
+        align-items: center;
+
+        justify-content: flex-start;
+
+        gap: 10px;
 
         border-radius: 16px;
 
         overflow: hidden;
+
+        text-align: center;
     }
+
+
+    /* ======================================
+       ÍCONE DO CARD
+
+       No celular fica EM CIMA
+    ====================================== */
+
+    .Card img {
+        width: 55px;
+
+        height: 55px;
+
+        object-fit: contain;
+
+        flex-shrink: 0;
+
+        margin-bottom: 5px;
+    }
+
+
+    /* ======================================
+       TEXTO DO CARD
+    ====================================== */
 
     .textocard {
         width: 100%;
 
         min-width: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
     }
+
+
+    /* Título */
 
     .textocard h1 {
         font-size: 22px;
@@ -456,7 +562,12 @@
         white-space: normal;
 
         overflow-wrap: break-word;
+
+        word-break: normal;
     }
+
+
+    /* Descrição */
 
     .textocard p {
         font-size: 14px;
@@ -468,7 +579,14 @@
         white-space: normal;
 
         overflow-wrap: break-word;
+
+        word-break: normal;
     }
+
+
+    /* ======================================
+       CASO O CARD USE H1/P DIRETAMENTE
+    ====================================== */
 
     .Card h1 {
         font-size: 20px;
@@ -486,14 +604,19 @@
         margin: 0;
     }
 
+
+    /* ======================================
+       DESATIVA MOVIMENTO NO TOUCH
+    ====================================== */
+
     .Card:hover {
         transform: none;
     }
 
 
-    /* ------------------------------------------
+    /* ======================================
        BOTÕES
-    ------------------------------------------ */
+    ====================================== */
 
     .botao {
         width: 100%;
@@ -514,6 +637,7 @@
 
         gap: 12px;
     }
+
 
     .Visualizar,
     .CV {
@@ -546,13 +670,21 @@
 
 @media (max-width: 380px) {
 
+    /* Foto */
+
     .Perfil {
         width: 180px;
     }
 
+
+    /* Título */
+
     .BoasVindas h1 {
         font-size: 34px;
     }
+
+
+    /* Texto */
 
     .BoasVindas p {
         font-size: 16px;
@@ -562,8 +694,17 @@
         font-size: 13px;
     }
 
+
+    /* Cards */
+
     .Card {
-        padding: 18px;
+        padding: 20px 18px;
+    }
+
+    .Card img {
+        width: 50px;
+
+        height: 50px;
     }
 
     .textocard h1 {
@@ -574,6 +715,9 @@
     .textocard p {
         font-size: 13px;
     }
+
+
+    /* Botões */
 
     .Visualizar,
     .CV {
